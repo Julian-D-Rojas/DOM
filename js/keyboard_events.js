@@ -29,8 +29,22 @@ window.addEventListener("resize",e =>{
     $cow.style.left = `${parseInt($cow.style.left,10)+x}px`
     $cow.style.top = `${parseInt($cow.style.top,10)+y}px`
   }
+
+  function shortcuts(e){
+    if(e.key === 'a' && e.altKey){
+        alert('Alerta ALT + a')
+    }
+    if(e.key === 'p' && e.altKey){
+        prompt('prompt ALT + p')
+    }
+    if(e.key === 'c' && e.altKey){
+        confirm('prompt ALT + c')
+    }
+}
  
 d.addEventListener('keydown',e=>{
+
+  shortcuts(e);
     switch(e.keyCode){
         case 37:
             e.preventDefault();
@@ -70,7 +84,7 @@ d.addEventListener('keydown',e=>{
            console.log(parseInt($cow.style.top,10)+step+parseInt(cowHeight,10));
            break;
 
-
+           
     }
     
 })
