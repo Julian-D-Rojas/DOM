@@ -23,6 +23,7 @@ let step = 8;
 d.addEventListener('keydown',e=>{
     switch(e.keyCode){
         case 37:
+            e.preventDefault();
            (parseInt($cow.style.left,10)-step>0)
            ?move(-step,0)
            :alert(`No se puede avanzar más hacia la derecha`);
@@ -31,6 +32,7 @@ d.addEventListener('keydown',e=>{
           break;
 
           case 39:
+            e.preventDefault();
            (parseInt($cow.style.left,10)+step+parseInt(cowWidth,10)<parseInt(canvasWidth, 10))
            ?move(step,0)
            :alert(`No se puede avanzar más hacia la izquierda`);
@@ -40,6 +42,7 @@ d.addEventListener('keydown',e=>{
           break;
 
           case 38:
+            e.preventDefault();
             (parseInt($cow.style.top,10)-step>0)
             ?move(0,-step)
             :alert(`No se puede avanzar más hacia arriba`);
@@ -48,6 +51,7 @@ d.addEventListener('keydown',e=>{
            break;
  
            case 40:
+            e.preventDefault();
             (parseInt($cow.style.top,10)+step+parseInt(cowHeight,10)<parseInt(canvasHeight, 10))
             ?move(0,step)
             :alert(`No se puede avanzar más hacia abajo`);
