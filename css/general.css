@@ -68,7 +68,7 @@ a {
   margin-right: auto;
   width: 100%;
   max-width: var(--container-width);
-  min-height: 100vh;
+  min-height: 60vh;
   text-align: center;
 }
 .h2 {
@@ -168,4 +168,8 @@ background-color: var(--main-color);
     background-color: var(--second-color);
     margin: 0;
     position: relative;
+}
+.div-countdown{
+  font-size: x-large;
+  min-height: 4rem;
 }

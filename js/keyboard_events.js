@@ -2,7 +2,8 @@ export default function keyboardEvents(canvas, cow) {
   const d = document;
   let $cow = d.querySelector(cow);
   let $canvas = d.querySelector(canvas);
-
+  //Funcion getBoundingClientRect: objeto con las dimensiones del canvas.
+  //let limitsStage = $canvas.getBoundingClientRect();
   let step = 8;
 
   let canvasWidth = getComputedStyle($canvas).getPropertyValue("width"),
@@ -84,7 +85,8 @@ d.addEventListener('keydown',e=>{
            console.log(parseInt($cow.style.top,10)+step+parseInt(cowHeight,10));
            break;
 
-           
+          //Propiedad transform: otra forma de mover un elemento html
+           //$cow.style.transform = `translate(${x*5}px, ${y*5}px)`
     }
     
 })
