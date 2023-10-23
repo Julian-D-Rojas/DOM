@@ -3,17 +3,27 @@ export default function keyboardEvents(canvas, cow) {
   let $cow = d.querySelector(cow);
   let $canvas = d.querySelector(canvas);
 
+  let step = 8;
+
   let canvasWidth = getComputedStyle($canvas).getPropertyValue("width"),
-    canvasHeight = getComputedStyle($canvas).getPropertyValue("height");
+  canvasHeight = getComputedStyle($canvas).getPropertyValue("height");
 
-  let cowWidth = getComputedStyle($cow).getPropertyValue("width"),
-    cowHeight = getComputedStyle($cow).getPropertyValue("width");
+let cowWidth = getComputedStyle($cow).getPropertyValue("width"),
+  cowHeight = getComputedStyle($cow).getPropertyValue("width");
 
-let step = 8;
+$cow.style.setProperty("position", "absolute");
+$cow.style.top = `${(parseInt(canvasHeight, 10)/2)-(parseInt(cowHeight,10)/2) }px`;
+$cow.style.left = `${(parseInt(canvasWidth, 10)/2)-(parseInt(cowWidth,10)/2) }px`;
+
+window.addEventListener("resize",e =>{
+
+ canvasWidth = getComputedStyle($canvas).getPropertyValue("width"),
+   canvasHeight = getComputedStyle($canvas).getPropertyValue("height");
 
   $cow.style.setProperty("position", "absolute");
   $cow.style.top = `${(parseInt(canvasHeight, 10)/2)-(parseInt(cowHeight,10)/2) }px`;
   $cow.style.left = `${(parseInt(canvasWidth, 10)/2)-(parseInt(cowWidth,10)/2) }px`;
+})
 
   const move = (x,y)=>{
     $cow.style.left = `${parseInt($cow.style.left,10)+x}px`
@@ -26,7 +36,7 @@ d.addEventListener('keydown',e=>{
             e.preventDefault();
            (parseInt($cow.style.left,10)-step>0)
            ?move(-step,0)
-           :alert(`No se puede avanzar más hacia la derecha`);
+           :alert(`No se puede avanzar más hacia la izquierda`);
           
           console.log(parseInt($cow.style.left,10)-step);
           break;
@@ -35,7 +45,7 @@ d.addEventListener('keydown',e=>{
             e.preventDefault();
            (parseInt($cow.style.left,10)+step+parseInt(cowWidth,10)<parseInt(canvasWidth, 10))
            ?move(step,0)
-           :alert(`No se puede avanzar más hacia la izquierda`);
+           :alert(`No se puede avanzar más hacia la derecha`);
           
            console.log(parseInt(canvasWidth, 10))
           console.log(parseInt($cow.style.left,10)+step+parseInt(cowWidth,10));
