@@ -83,11 +83,45 @@ a {
   right: 5vw;
   display: flex;
   height: 4rem;
+  width: 4rem;
   justify-content: center;
   align-items: center;
   background-color: var(--main-color);
   border-radius: 100%;
   z-index: 3;
+}
+.hamburger-inner {
+  width: 35px;}
+  .hamburger-inner:before {
+    width: 35px;}
+    .hamburger-inner:after {
+      width: 35px;}
+
+.btn-scrollTop {
+  position: fixed;
+  bottom: 5vh;
+  right: 15vw;
+  display: flex;
+  height: 4rem;
+  width: 4rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  border-radius: 100%;
+  z-index: 3;
+ cursor: pointer;
+ border-style: none;
+ pointer-events: all;
+ opacity: 1;
+ transition: opacity 0.5s ease;
+}
+
+.btn-scrollTop:hover {
+  opacity:.7;
+}
+.btn-scrollTop.is-active{
+pointer-events: none;
+  opacity: 0;
 }
 
 .aside-pannel {
