@@ -4,7 +4,7 @@ export default function scrollToTop(btnTop) {
 
   d.addEventListener("click", (e) => {
     if (e.target.matches(btnTop) || e.target.matches(`${btnTop} *`)) {
-      window.scrollTo(0, 0);
+      window.scrollTo({ behavior: "smooth", top: 0 });
       console.log(`top: ${window.scrollY}`);
       $btnTop.classList.toggle("is-active");
     }
