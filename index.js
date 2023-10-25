@@ -3,6 +3,7 @@ import clock from "./js/clock.js";
 import keyboardEvents from "./js/keyboard_events.js";
 import { countdown } from "./js/countdown.js";
 import scrollToTop from "./js/scroll_to_top.js";
+import lightDarkMode from "./js/ligth_dark_mode.js";
 
 const d = document;
 
@@ -13,4 +14,5 @@ d.addEventListener("DOMContentLoaded", (e) => {
   keyboardEvents(".figure-keyboard", ".figure-keyboard .img");
   countdown(".div-countdown");
   scrollToTop(".btn-scrollTop");
+  lightDarkMode(".btn-lightDarkMode","class-dark");
 });

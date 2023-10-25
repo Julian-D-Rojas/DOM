@@ -2,13 +2,22 @@
 :root {
     --main-font: sans-serif;
     --font-size: 16px;
-    --main-color: #f7df1e;
-    --textDOM: rgb(67, 67, 67);
-    --second-color: #222;
-    --main-modal-color: rgba(247, 222, 30, 0.85);
-    --second-modal-color: rgba(34, 34, 34, 0.85);
     --container-width: 1200px;
+
+    --main-color: #f7df1e;
+    --second-color: #222;
+    --textDOM: rgb(67, 67, 67);
+    --second-text-color:#e5e5e5;
+    
     --section-odd-color: #eeeeee;
+    --second-section-odd-color:#353535;
+
+    --green:#37a314;
+    --main-modal-color: #f7df1e;
+    --second-modal-color: rgba(34, 34, 34, 0.85);
+    --textDOM-modal: rgb(67, 67, 67);
+    --dark-modal-color: #222;
+
   }
   
   html {
@@ -89,7 +98,7 @@ a {
   width: 4rem;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: var(--main-modal-color);
   border-radius: 100%;
   z-index: 3;
 }
@@ -99,6 +108,61 @@ a {
     width: 35px;}
     .hamburger-inner:after {
       width: 35px;}
+.btn-lightDarkMode{
+  position: fixed;
+  bottom: 5vh;
+  left: 3vw ;
+  display: flex;
+  height: 4rem;
+  width: 4rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  border-radius: 100%;
+  z-index: 3;
+ cursor: pointer;
+ border-style: none;
+ pointer-events: all;
+ border: 1px solid var(--main-modal-color);
+}
+.btn-lightDarkMode svg
+{
+  width: 2.5rem;
+}
+.btn-lightDarkMode svg:nth-child(1) {
+display: block;
+}
+.btn-lightDarkMode svg:nth-child(2) {
+  display: none;
+  }
+.btn-lightDarkMode svg:nth-child(1).darkMode{
+display: none;
+}
+.btn-lightDarkMode svg:nth-child(2).darkMode{
+  display: block;
+  }
+  .class-dark{
+
+    --main-color: #222;
+    --second-color:#f7df1e;
+    --textDOM:#e5e5e5;
+    --second-text-color: rgb(67, 67, 67);
+    
+    --section-odd-color: #353535;
+    --second-section-odd-color:#eeeeee;
+
+    background-color: #222;
+    color: var(--textDOM);
+
+    /* --main-color: #f7df1e;
+    --second-color: #222;
+    --textDOM: rgb(67, 67, 67);
+    --second-text-color:#e5e5e5;
+    
+    --section-odd-color: #eeeeee;
+    --second-section-odd-color:#353535; */
+  }
 
 .btn-scrollTop {
   position: fixed;
@@ -109,7 +173,7 @@ a {
   width: 4rem;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: var(--main-modal-color);
   border-radius: 100%;
   z-index: 3;
  cursor: pointer;
@@ -120,11 +184,10 @@ a {
 }
 
 .btn-scrollTop:hover{
-  background-color: var(--second-color);
-  border: 1px solid var(--main-color);
-  color: var(--main-color);
+  background-color: var(--dark-modal-color);
+  border: 1px solid var(--main-modal-color);
+  color: var(--main-modal-color);
 }
-
 
 .btn-scrollTop.is-active{
 pointer-events: none;
@@ -170,22 +233,22 @@ background-color: var(--section-odd-color);
 }
 .a-menu {
     width: inherit;
-  color: var(--main-color);
+  color: var(--main-modal-color);
   font-size: x-large;
   padding: 2rem;
   display: block;
   transition: all 0.3s ease;
 }
 .a-menu:hover {
-  background-color: var(--main-color);
-  color: var(--textDOM);
+  background-color: var(--main-modal-color);
+  color: var(--textDOM-modal);
   font-weight: bold;
 }
 
 .button-clock{
     width: 4rem;
     height: 4rem;
-background-color: var(--main-color);
+background-color: var(--main-modal-color);
     border: none;
     border-radius: 100%;
     cursor: pointer;
@@ -206,7 +269,7 @@ background-color: var(--main-color);
 .figure-keyboard{
     width: 100%;
     height: 70vh;
-    background-color: var(--second-color);
+    background-color: var(--green);
     margin: 0;
     position: relative;
 }
