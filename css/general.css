@@ -12,7 +12,6 @@
     --section-odd-color: #eeeeee;
     --second-section-odd-color:#353535;
 
-    --green:#37a314;
     --main-modal-color: #f7df1e;
     --second-modal-color: rgba(34, 34, 34, 0.85);
     --textDOM-modal: rgb(67, 67, 67);
@@ -55,7 +54,9 @@
   
 /* **********   Fin  Reset CSS     ********** */
 
-  
+section[id] {
+  scroll-margin-top: 4.32rem;
+}
 a {
   text-decoration: none;
   color: currentColor;
@@ -72,10 +73,11 @@ a {
     margin: 0 auto;
     text-align: center;
   }
+  
 .section {
  
   padding: 2rem;
-  padding-top: 4rem;
+  padding-top: 2rem;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -269,7 +271,8 @@ background-color: var(--main-modal-color);
 .figure-keyboard{
     width: 100%;
     height: 70vh;
-    background-color: var(--green);
+    background-image: url(../assets/grass.jpg);
+  background-repeat: repeat;
     margin: 0;
     position: relative;
 }
@@ -277,3 +280,40 @@ background-color: var(--main-modal-color);
   font-size: x-large;
   min-height: 4rem;
 }
+ iframe{
+  width: 100%;
+  min-width: 20rem;
+  max-width: 40rem;
+  height: 20rem;
+  margin:2rem 0;
+ }
+ .a-responsive{
+  padding: 0.5rem;
+  color: var(--second-color);
+  font-size: larger;
+ }
+ .a-responsive:hover{
+opacity: .7;
+ }
+ .div-responsiveContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ #form-tester{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ }
+
+ #form-tester input {
+  display: block;
+  max-width: 30rem;
+  width: 100%;
+  margin: 0.3rem 0.2rem;
+ }
+ .div-btnContainer{
+  margin: 0.3rem 0;
+  display: flex;
+ }
