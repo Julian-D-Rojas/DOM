@@ -6,6 +6,8 @@ import scrollToTop from "./js/scroll_to_top.js";
 import lightDarkMode from "./js/ligth_dark_mode.js";
 import responsive  from "./js/responsive.js";
 import responsiveTester from "./js/responsive_tester.js";
+import userDeviceInfo from "./js/user_agent.js";
+import networkDetection from "./js/network_detection.js";
 
 const d = document;
 
@@ -27,6 +29,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
      style="border:0;" allowfullscreen="" loading="lazy"
      referrerpolicy="no-referrer-when-downgrade"></iframe>`},'(min-width: 400px)')
     responsiveTester("form-tester");
+    userDeviceInfo("div-containerNavigator");
+    networkDetection(".div-statusContainer",".aside-networkStatus");
 });
 
 lightDarkMode(".btn-lightDarkMode","class-dark");
