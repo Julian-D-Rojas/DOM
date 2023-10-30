@@ -334,3 +334,27 @@ opacity: .7;
   transition: opacity 3s ease;
  }
 
+ .figcaption{
+  background-color: var(--section-odd-color);
+  padding: 0.5rem 0;
+ }
+ .figure-filtrer{
+  display: inline-block;
+  margin: 0;
+  width: fit-content;
+  transition: all 0.3s ease-out;
+ }
+ .div-filtrerContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap:1rem;
+  
+ }
+ .input-search{
+  margin: 1rem;
+ }
+ .filter {
+  visibility: hidden;
+  opacity: 0;
+  order:1;/* propiedad de grid que reorganiza los elementos*/
+ }

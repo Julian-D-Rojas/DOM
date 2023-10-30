@@ -27,5 +27,6 @@ export default function getGeolocation(id){
     }
 
     n.geolocation.getCurrentPosition(success, error, options)
-    // watch current position ver en linea 
+    // watchPosition(): un metodo para ver en tiempo real la ubicaicion 
+    //https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
 }
