@@ -8,6 +8,8 @@ import responsive  from "./js/responsive.js";
 import responsiveTester from "./js/responsive_tester.js";
 import userDeviceInfo from "./js/user_agent.js";
 import networkDetection from "./js/network_detection.js";
+import webcamDetection from "./js/webcam_detection.js";
+import getGeolocation from "./js/location.js";
 
 const d = document;
 
@@ -31,6 +33,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
     responsiveTester("form-tester");
     userDeviceInfo("div-containerNavigator");
     networkDetection(".div-statusContainer",".aside-networkStatus");
+  //  webcamDetection("video-webcam");
+  getGeolocation(".div-location");
 });
 
 lightDarkMode(".btn-lightDarkMode","class-dark");
