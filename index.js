@@ -11,6 +11,7 @@ import networkDetection from "./js/network_detection.js";
 import webcamDetection from "./js/webcam_detection.js";
 import getGeolocation from "./js/location.js";
 import searchFilter from "./js/search_filter.js";
+import sorteo from "./js/sorteo.js";
 
 const d = document;
 
@@ -37,6 +38,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   //  webcamDetection("video-webcam");
   getGeolocation(".div-location");
   searchFilter(".input-search",".div-filtrerContainer",".figcaption")
+  sorteo(".li",".input-btn")
 });
 
 lightDarkMode(".btn-lightDarkMode","class-dark");

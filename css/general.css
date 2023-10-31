@@ -358,3 +358,6 @@ opacity: .7;
   opacity: 0;
   order:1;/* propiedad de grid que reorganiza los elementos*/
  }
+ .ul-sorteo{
+  padding: 0;
+ }
