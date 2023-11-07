@@ -219,6 +219,75 @@ pointer-events: none;
   pointer-events: auto;
   transform: translate(0, 0);
 }
+
+@media screen and (min-width:1024px) {
+  body{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 4rem auto;
+    grid-template-areas:
+    "header header"
+    "main   pannel";
+  }
+
+  .main{
+    grid-area: main;
+  }
+
+  .header{
+    grid-area: header;
+  }
+ 
+  .aside-pannel{
+    grid-area: pannel;
+    align-self: flex-start;
+    position: sticky;
+    top: 4rem;
+    transform: translate(0,0);
+    justify-content: flex-start;
+   
+  }
+  .hamburger{
+    display: none;
+  }
+.btn-scrollTop{
+  left: calc(3vw + 5rem);
+}
+.a-menu {
+  padding: 1rem!important;
+}
+}
+  /* Inicio Pannel Desktop */
+ 
+  /* .aside-pannelDesktop{
+    display: block;
+    background-color: var(--second-modal-color);
+    text-align: center;
+    overflow-y: auto;
+    pointer-events: auto;
+    z-index: 2;
+  }
+
+  .a-menuDesktop{
+    width: inherit;
+    color: var(--main-modal-color);
+    font-size: x-large;
+    display: block;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    }
+    .a-menuDesktop.is-active {
+      background-color: var(--main-modal-color);
+      color: var(--textDOM-modal);
+      font-weight: bold;
+    }
+    .a-menuDesktop:hover {
+      background-color: var(--main-modal-color);
+      color: var(--textDOM-modal);
+      font-weight: bold;
+    } */
+/* Fin Pannel Desktop */
+
 .section:nth-child(odd) {
 background-color: var(--section-odd-color);
 }
@@ -361,3 +430,37 @@ opacity: .7;
  .ul-sorteo{
   padding: 0;
  }
+ .div-containerSlider{
+  position: relative;
+ }
+ .article-slider{
+  width: 400%;
+  display: flex;
+  translate: 0%;
+  transition: all 0.5s ease;
+
+ }
+ .figure-slider{
+  width: 25%;
+  margin: 0;
+ text-align: center;
+ transition: all 0.5s ease;
+ }
+.svg-slider{
+  position: absolute;
+  width: 2.2rem;
+  top: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+.svg-slider:nth-child(2){
+  left: 3vw;
+}
+.svg-slider:nth-child(3){
+  right: 3vw;
+}
+
+.svg-slider:hover{
+  opacity: 1;
+}

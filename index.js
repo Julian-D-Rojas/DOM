@@ -12,6 +12,8 @@ import webcamDetection from "./js/webcam_detection.js";
 import getGeolocation from "./js/location.js";
 import searchFilter from "./js/search_filter.js";
 import sorteo from "./js/sorteo.js";
+import responsiveSlider from "./js/responsive_slider.js";
+import scrollSpy from "./js/scroll_spy.js";
 
 const d = document;
 
@@ -39,6 +41,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
   getGeolocation(".div-location");
   searchFilter(".input-search",".div-filtrerContainer",".figcaption")
   sorteo(".li",".input-btn")
+  responsiveSlider(".article-slider",".svg-slider")
+  scrollSpy(".aside-pannelDesktop",".aside-pannelDesktop .a-menu",".section")
 });
 
 lightDarkMode(".btn-lightDarkMode","class-dark");
