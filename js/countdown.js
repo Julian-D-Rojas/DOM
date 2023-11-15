@@ -1,7 +1,7 @@
 export default function countdown(container) {
   const d = document;
   let $container = d.querySelector(container);
-  let countDownDate = new Date(2023, 10, 7, 15, 1);
+  let countDownDate = new Date(2023, 11, 15, 10, 30);
 
   //let countDown =((countDownDate.getTime() )-(new Date().getTime()));
 
